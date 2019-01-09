@@ -1,13 +1,12 @@
 #include "bandit/bandit.h"
+#include "enum.h"
+
+#include <QString>
 
 using namespace bandit;
 using namespace snowhouse;
 
-enum class Animal {
-	Dog,
-	Horse,
-	Cat
-};
+BETTER_ENUM(Animal, char, Dog, Horse, Cat)
 
 go_bandit([]() {
 	describe("enum class", [&]() {
