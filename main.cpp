@@ -1,19 +1,22 @@
 #include "bandit/bandit.h"
-#include "enum.h"
-
-#include <QString>
 
 using namespace bandit;
 using namespace snowhouse;
 
-BETTER_ENUM(Animal, char, Dog, Horse, Cat)
-
 go_bandit([]() {
-	describe("enum class", [&]() {
-		it("fails displaying enum class value", [&] {
-			Animal dog = Animal::Dog;
-			Animal cat = Animal::Cat;
-			AssertThat(dog, Equals(cat));
+	describe("engine", []() {
+		it("is empty", [&]() {
+			AssertThat(true, IsTrue());
+		});
+
+		describe("bmp", [&]() {
+			it("open", [&]() {
+				AssertThat(false, IsTrue());
+			});
+
+			it("display first frame", [&]() {
+				AssertThat(false, IsTrue());
+			});
 		});
 	});
 });
